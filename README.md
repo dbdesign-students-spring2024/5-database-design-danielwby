@@ -21,7 +21,7 @@ From the given data,It does not conform to 4NF due to multivalued dependencies. 
 
 Based on these dependencies, we can split the data into the following tables:
 
-**Professors Table:**
+## **Professors Table:**
 
 **professor_id (Primary Key)**
 
@@ -35,7 +35,7 @@ _This table holds information about professors, including their unique identifie
 
 _By separating professors into their own table, we eliminate the potential for repeating groups or multi-valued dependencies related to professor attributes._
 
-**courses Table:**
+## **courses Table:**
 
 **course_id (Primary Key)**
 | course_id | course_name          |
@@ -49,7 +49,7 @@ _This table stores information about the courses offered at the university, incl
 
 _Separating courses into their own table ensures that course-related attributes are stored independently, avoiding duplication and ensuring data integrity._
 
-**sections Table:**
+## **sections Table:**
 
 **section_id (Primary Key)**
 
@@ -67,7 +67,7 @@ _This table represents sections of courses, including attributes such as section
 
 _By creating a separate table for sections, we capture the relationship between courses, professors, and classrooms, allowing for flexibility in assigning professors to multiple sections of the same course._
 
-**Assignments Table**
+## **Assignments Table**
 
 **assignment_id (Primary Key)**
 
