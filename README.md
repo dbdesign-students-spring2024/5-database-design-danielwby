@@ -29,9 +29,10 @@ Based on these dependencies, we can split the data into the following tables:
 | 1            | Melvin         | l.melvin@foo.edu  |
 | 2            | Logston        | e.logston@foo.edu |
 | 3            | Nevarez        | i.nevarez@foo.edu |
-__This table holds information about professors, including their unique identifier (professor_id), name (professor_name), and email (professor_email).
 
-By separating professors into their own table, we eliminate the potential for repeating groups or multi-valued dependencies related to professor attributes.__
+_This table holds information about professors, including their unique identifier (professor_id), name (professor_name), and email (professor_email)._
+
+_By separating professors into their own table, we eliminate the potential for repeating groups or multi-valued dependencies related to professor attributes._
 
 **courses Table:**
 
