@@ -119,4 +119,4 @@ _This table maintains information about students' grades for each assignment, wi
 _This table captures the relationship between students and assignments, allowing for the storage of grade-related data independently of other entities._
 
 ## 3、The ER diagram(s) of the 4NF-compliant version of the data set
-[](/images/ER.png)
+[Here is E-R diagram](/images/ER.png)
