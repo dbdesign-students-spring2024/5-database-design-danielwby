@@ -81,6 +81,10 @@ Based on these dependencies, we can split the data into the following tables:
 | 5          | 5             | Page 87          |
 
 **Students Grades Table:**
+
+**（student_id, assignment_id）(Primary Key)**
+
+**assignment_id(Foreign Key referencing Assignments Table)**
 | student_id | assignment_id | grade |
 |------------|---------------|-------|
 | 1          | 1             | 80    |
