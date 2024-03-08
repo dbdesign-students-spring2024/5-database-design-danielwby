@@ -21,6 +21,9 @@ From the given data,It does not conform to 4NF due to multivalued dependencies. 
 
 Based on these dependencies, we can split the data into the following tables:
 **Professors Table:**
+
+**professor_id (Primary Key)**
+
 | professor_id | professor_name | professor_email   |
 |--------------|----------------|-------------------|
 | 1            | Melvin         | l.melvin@foo.edu  |
@@ -28,6 +31,8 @@ Based on these dependencies, we can split the data into the following tables:
 | 3            | Nevarez        | i.nevarez@foo.edu |
 
 **courses Table:**
+
+**course_id (Primary Key)**
 | course_id | course_name          |
 |-----------|----------------------|
 | 1         | Data normalization  |
@@ -36,6 +41,12 @@ Based on these dependencies, we can split the data into the following tables:
 | 4         | Spreadsheet aggregate functions |
 
 **sections Table:**
+
+**section_id (Primary Key)**
+
+**course_id (Foreign Key referencing Courses Table)**
+
+**professor_id (Foreign Key referencing Professors Table)**
 | section_id | course_id | professor_id | classroom |
 |------------|-----------|--------------|-----------|
 | 1          | 1         | 1            | WWH 101   |
@@ -44,6 +55,10 @@ Based on these dependencies, we can split the data into the following tables:
 | 4          | 4         | 3            | WWH 201   |
 
 **Assignments Table**
+
+**assignment_id (Primary Key)**
+
+**section_id (Foreign Key referencing Sections Table)**
 | assignment_id | section_id | assignment_topic             | due_date |
 |---------------|------------|------------------------------|----------|
 | 1             | 1          | Data normalization           | 23.02.21 |
@@ -53,6 +68,10 @@ Based on these dependencies, we can split the data into the following tables:
 | 5             | 4          | Spreadsheet aggregate functions | 04.07.21 |
 
 **Readings Table**
+
+**reading_id (Primary Key)**
+
+**assignment_id (Foreign Key referencing Assignments Table)**
 | reading_id | assignment_id | relevant_reading |
 |------------|---------------|------------------|
 | 1          | 1             | Chapter 3        |
