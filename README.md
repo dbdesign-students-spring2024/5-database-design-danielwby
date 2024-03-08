@@ -117,3 +117,5 @@ _By creating a separate table for readings, we remove the multi-valued dependenc
 _This table maintains information about students' grades for each assignment, with attributes including student_id, assignment_id, and grade._
 
 _This table captures the relationship between students and assignments, allowing for the storage of grade-related data independently of other entities._
+
+## 3、The ER diagram(s)of the 4NF-compliant version of the data set
