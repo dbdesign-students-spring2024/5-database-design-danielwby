@@ -47,6 +47,7 @@ Based on these dependencies, we can split the data into the following tables:
 | 3             | 1          | Data normalization           | 23.02.21 |
 | 4             | 3          | Python and pandas            | 05.05.21 |
 | 5             | 4          | Spreadsheet aggregate functions | 04.07.21 |
+
 **Readings Table**
 | reading_id | assignment_id | relevant_reading |
 |------------|---------------|------------------|
