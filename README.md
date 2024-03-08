@@ -20,6 +20,7 @@ From the given data,It does not conform to 4NF due to multivalued dependencies. 
 4）Professors give readings that are relevant and helpful to a given assignment.
 
 Based on these dependencies, we can split the data into the following tables:
+
 **Professors Table:**
 
 **professor_id (Primary Key)**
@@ -44,6 +45,10 @@ _By separating professors into their own table, we eliminate the potential for r
 | 3         | Python and pandas    |
 | 4         | Spreadsheet aggregate functions |
 
+_This table stores information about the courses offered at the university, including their unique identifier (course_id) and name (course_name)._
+
+_Separating courses into their own table ensures that course-related attributes are stored independently, avoiding duplication and ensuring data integrity._
+
 **sections Table:**
 
 **section_id (Primary Key)**
@@ -58,6 +63,10 @@ _By separating professors into their own table, we eliminate the potential for r
 | 3          | 3         | 2            | 60FA 314  |
 | 4          | 4         | 3            | WWH 201   |
 
+_This table represents sections of courses, including attributes such as section_id, the course_id they belong to (foreign key referencing Courses Table), the professor teaching the section (foreign key referencing Professors Table), and the classroom where the section meets._
+
+_By creating a separate table for sections, we capture the relationship between courses, professors, and classrooms, allowing for flexibility in assigning professors to multiple sections of the same course._
+
 **Assignments Table**
 
 **assignment_id (Primary Key)**
@@ -70,6 +79,10 @@ _By separating professors into their own table, we eliminate the potential for r
 | 3             | 1          | Data normalization           | 23.02.21 |
 | 4             | 3          | Python and pandas            | 05.05.21 |
 | 5             | 4          | Spreadsheet aggregate functions | 04.07.21 |
+
+_This table contains information about assignments given in each section, with attributes like assignment_id, the section_id they belong to (foreign key referencing Sections Table), the assignment topic, and the due date_
+
+_Separating assignments into their own table allows us to track assignments specific to each section, ensuring that assignment-related data is stored independently of other entities._
 
 **Readings Table**
 
@@ -84,6 +97,10 @@ _By separating professors into their own table, we eliminate the potential for r
 | 4          | 4             | Chapter 14       |
 | 5          | 5             | Page 87          |
 
+_This table stores readings relevant to each assignment, with attributes including reading_id, the assignment_id they belong to (foreign key referencing Assignments Table), and the relevant reading material._
+
+_By creating a separate table for readings, we remove the multi-valued dependency between assignments and relevant readings, ensuring that each reading is associated with a single assignment._
+
 **Students Grades Table:**
 
 **（student_id, assignment_id）(Primary Key)**
@@ -96,3 +113,7 @@ _By separating professors into their own table, we eliminate the potential for r
 | 4          | 3             | 75    |
 | 2          | 4             | 92    |
 | 2          | 5             | 65    |
+
+_This table maintains information about students' grades for each assignment, with attributes including student_id, assignment_id, and grade._
+
+_This table captures the relationship between students and assignments, allowing for the storage of grade-related data independently of other entities._
