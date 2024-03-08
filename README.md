@@ -18,27 +18,23 @@ From the given data,It does not conform to 4NF due to multivalued dependencies. 
 Based on these dependencies, we can split the data into the following tables:
 **Professors Table:**
 | professor_id | professor_name | professor_email   |
-|--------------|----------------|-------------------|
 | 1            | Melvin         | l.melvin@foo.edu  |
 | 2            | Logston        | e.logston@foo.edu |
 | 3            | Nevarez        | i.nevarez@foo.edu |
 **courses Table:**
 | course_id | course_name          |
-|-----------|----------------------|
 | 1         | Data normalization  |
 | 2         | Single table queries |
 | 3         | Python and pandas    |
 | 4         | Spreadsheet aggregate functions |
 **sections Table:**
 | section_id | course_id | professor_id | classroom |
-|------------|-----------|--------------|-----------|
 | 1          | 1         | 1            | WWH 101   |
 | 2          | 2         | 2            | 60FA 314  |
 | 3          | 3         | 2            | 60FA 314  |
 | 4          | 4         | 3            | WWH 201   |
 **Assignments Table**
 | assignment_id | section_id | assignment_topic             | due_date |
-|---------------|------------|------------------------------|----------|
 | 1             | 1          | Data normalization           | 23.02.21 |
 | 2             | 2          | Single table queries         | 18.11.21 |
 | 3             | 1          | Data normalization           | 23.02.21 |
@@ -46,7 +42,6 @@ Based on these dependencies, we can split the data into the following tables:
 | 5             | 4          | Spreadsheet aggregate functions | 04.07.21 |
 **Readings Table**
 | reading_id | assignment_id | relevant_reading |
-|------------|---------------|------------------|
 | 1          | 1             | Chapter 3        |
 | 2          | 2             | Chapter 11       |
 | 3          | 3             | Chapter 3        |
@@ -54,7 +49,6 @@ Based on these dependencies, we can split the data into the following tables:
 | 5          | 5             | Page 87          |
 **Students Grades Table:**
 | student_id | assignment_id | grade |
-|------------|---------------|-------|
 | 1          | 1             | 80    |
 | 7          | 2             | 25    |
 | 4          | 3             | 75    |
