@@ -84,7 +84,7 @@ _This table contains information about assignments given in each section, with a
 
 _Separating assignments into their own table allows us to track assignments specific to each section, ensuring that assignment-related data is stored independently of other entities._
 
-<center>**Readings Table**</center>
+### **Readings Table**
 
 **reading_id (Primary Key)**
 
@@ -101,7 +101,7 @@ _This table stores readings relevant to each assignment, with attributes includi
 
 _By creating a separate table for readings, we remove the multi-valued dependency between assignments and relevant readings, ensuring that each reading is associated with a single assignment._
 
-<center>**Students Grades Table:**</center>
+### **Students Grades Table:**
 
 **（student_id, assignment_id）(Primary Key)**
 
