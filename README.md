@@ -10,9 +10,13 @@
 
 # 2、The description of what makes this data set not compliant with 4NF
 From the given data,It does not conform to 4NF due to multivalued dependencies. Here are the details: 
+
 1）Professor can teach multiple sections of the same course.
+
 2）Different sections of the same course may meet in different classrooms, even if the professor is the same.
+
 3）Professors give assignments with due dates specific to the section of the course.
+
 4）Professors give readings that are relevant and helpful to a given assignment.
 
 Based on these dependencies, we can split the data into the following tables:
